@@ -1,0 +1,23 @@
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    /* Cache les images en dehors du cadre */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    /* Chaque slide prend toute la largeur du carrousel */
+    text-align: center;
+    /* Centre l'image si elle ne remplit pas la largeur */
+}
+
+.slide img {
+    width: 100%;
+    /* Adapte l'image à la largeur du slide */
+    vertical-align: middle;
+}

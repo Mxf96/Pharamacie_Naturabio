@@ -1,0 +1,121 @@
+/* Style global pour le corps de la page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8ffacb3;
+    /* Fond de couleur claire */
+    margin: 0;
+    overflow-x: hidden;
+    /* Empêche le défilement horizontal */
+    font-family: "Gill Sans", sans-serif;
+    align-items: center;
+    /* Centre horizontalement */
+    justify-content: center;
+    /* Centre verticalement */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    /* Image de fond fixe */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/pictures/bg-2.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: -1;
+    /* Place l'image en arrière-plan */
+    animation: fadeInBackground 2s ease-in forwards;
+}
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Style pour la card contenant le formulaire */
+.card {
+    background-color: #f8ffacb3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    width: 50%;
+    /* Largeur de la card */
+    max-width: 500px;
+    /* Largeur maximale pour les grands écrans */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #d7fbaf;
+    color: white;
+    text-shadow: 2px 2px 4px #00000080;
+    font-weight: bolder;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.btn:hover {
+    background-color: #4CAF50;
+}
+
+.back-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.back-button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Adaptations pour les écrans plus petits */
+@media screen and (max-width: 600px) {
+    .card {
+        width: 80%;
+        /* Plus large sur les petits écrans */
+    }
+}

@@ -1,0 +1,217 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8ffacb3;
+    /* Fond de couleur claire */
+    margin: 0;
+    overflow-x: hidden;
+    /* Empêche le défilement horizontal */
+    font-family: "Gill Sans", sans-serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    /* Image de fond fixe */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/pictures/bg-2.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: -1;
+    /* Place l'image en arrière-plan */
+    animation: fadeInBackground 2s ease-in forwards;
+}
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.logo-title {
+    position: absolute;
+    top: 5px;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    animation: slideDownEffect 2s ease forwards;
+    user-select: none;
+    /* Désactive la sélection du texte */
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.title {
+    font-size: larger;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px #00000080;
+    margin-left: 20px;
+}
+
+.navbar {
+    position: fixed;
+    /* Navigation fixée en haut */
+    top: 20px;
+    right: 20px;
+    background-color: #f8ffacb3;
+    /* Fond semi-transparent */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    /* S'assure qu'elle est au-dessus du contenu */
+}
+
+.navbar>a {
+    font-size: larger;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+    margin-left: 30px;
+    text-shadow: 2px 2px 4px #00000080;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.navbar>a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar>a:hover::after {
+    width: 100%;
+}
+
+.main-content,
+.secondary-content {
+    color: #fff;
+    text-shadow: 2px 2px 4px #00000080;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    /* Espace pour le logo et la navbar */
+    z-index: 1;
+    opacity: 0;
+    animation: fadeInEffect 2s ease-in forwards;
+    background-color: #f8ffacdd;
+    /* #ffffffccFond semi-transparent pour la lisibilité */
+    padding: 20px;
+    margin-top: 50px;
+    /* Espace après la navbar */
+    margin-left: 30%;
+    /* Centrage horizontal */
+    margin-right: 30%;
+    animation-delay: 1s;
+    /* Délai avant l'animation */
+    border-radius: 25px;
+    flex-grow: 1;
+    /* Prend l'espace disponible */
+}
+
+.secondary-content {
+    animation-delay: 2s;
+    /* Délai différent pour le contenu secondaire */
+    margin-bottom: 15%;
+}
+
+@keyframes fadeInEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownEffect {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour le footer */
+.footer {
+    background-color: #f8ffacad;
+    color: #fff;
+    text-shadow: 2px 2px 4px #00000080;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    opacity: 0;
+    animation: fadeInFooter 2s ease-in forwards;
+}
+
+@keyframes fadeInFooter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer i {
+    margin-right: 2%;
+}
+
+@media screen and (max-width: 1024px) {
+    .secondary-content {
+        animation-delay: 2s;
+        /* Délai différent pour le contenu secondaire */
+        margin-bottom: 30%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .secondary-content {
+        animation-delay: 2s;
+        /* Délai différent pour le contenu secondaire */
+        margin-bottom: 30%;
+    }
+}

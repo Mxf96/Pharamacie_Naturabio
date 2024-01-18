@@ -1,0 +1,137 @@
+/* Style pour l'arrière-plan assombri du modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+}
+
+/* Style pour le contenu du modal (le formulaire) */
+.modal-content-login {
+    background-color: #fff;
+    margin: 10% auto;
+    /* Réduit la marge supérieure pour positionner plus haut */
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Les autres propriétés restent inchangées */
+}
+
+/* Adapter le modal pour les petits écrans */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 80%;
+        margin-top: 5%;
+        /* Ajuster également pour les petits écrans */
+    }
+}
+
+/* Style pour le bouton de fermeture du modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style pour les éléments du formulaire */
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-form label {
+    margin-top: 10px;
+    color: #333;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#login-form input[type="email"],
+#login-form input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    width: 50%;
+    background-color: #f8ffac;
+    color: #333;
+    padding: 15px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#login-form button:hover {
+    background-color: #effe4a;
+}
+
+/* Style pour les champs de formulaire */
+#login-form input[type="email"],
+#login-form input[type="password"] {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Adapter le modal pour les petits écrans */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 80%;
+        margin: 10% auto;
+    }
+}
+
+#login-form a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bolder;
+    position: relative;
+    /* Nécessaire pour le pseudo-élément */
+    overflow: hidden;
+    /* Garde la barre à l'intérieur des liens */
+}
+
+#login-form a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    /* Positionne la barre juste sous le texte */
+    left: 0;
+    width: 0;
+    /* Commence sans largeur */
+    height: 2px;
+    /* Hauteur de la barre */
+    background-color: black;
+    /* Couleur de la barre */
+    transition: width 0.3s ease-in-out;
+    /* Animation de transition */
+}
+
+#login-form a:hover::after {
+    width: 100%;
+    /* Étend la barre sur toute la largeur lors du survol */
+}

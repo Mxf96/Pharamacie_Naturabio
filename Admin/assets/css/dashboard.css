@@ -1,0 +1,163 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8ffacb3;
+    /* Fond de couleur claire */
+    margin: 0;
+    overflow-x: hidden;
+    /* Empêche le défilement horizontal */
+    font-family: "Gill Sans", sans-serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    /* Image de fond fixe */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/pictures/bg-2.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: -1;
+    /* Place l'image en arrière-plan */
+    animation: fadeInBackground 2s ease-in forwards;
+}
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.logo-title {
+    position: absolute;
+    top: 5px;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    animation: slideDownEffect 2s ease forwards;
+    user-select: none;
+    /* Désactive la sélection du texte */
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.title {
+    font-size: larger;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px #00000080;
+    margin-left: 20px;
+}
+
+.navbar {
+    position: fixed;
+    /* Navigation fixée en haut */
+    top: 20px;
+    right: 20px;
+    background-color: #f8ffacb3;
+    /* Fond semi-transparent */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    /* S'assure qu'elle est au-dessus du contenu */
+}
+
+.navbar>a {
+    font-size: larger;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+    margin-left: 30px;
+    text-shadow: 2px 2px 4px #00000080;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.navbar>a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar>a:hover::after {
+    width: 100%;
+}
+
+@keyframes slideDownEffect {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* button dashboard */
+
+.dashboard-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-top: 6%
+}
+
+.dashboard-container>h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #00000080;
+    background-color: #f3fdc8;
+    padding: 2%;
+    margin: 0 40% 0 40%;
+    border-radius: 0 15px 0 15px;
+    border: 2px solid #fff;
+    ;
+}
+
+.dashboard-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dashboard-button {
+    background-color: #f3fdc8;
+    color: white;
+    text-shadow: 2px 2px 4px #00000080;
+    font-weight: bolder;
+    border: 2px solid #fff;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+
+}
+
+.dashboard-button:hover {
+    background-color: #4CAF50;
+}

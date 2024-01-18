@@ -1,0 +1,101 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.h1 {
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px #00000080;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Style pour les informations */
+.content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #fff;
+    text-shadow: 2px 2px 4px #00000080;
+    font-weight: bold;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.infoCell {
+    flex-basis: 30%;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #f8fface0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoCell h2 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #00000080;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-bottom: 15%;
+}
+
+.infoCell a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.infoCell a:hover {
+    color: #007bff;
+}
+
+.infoCell i {
+    font-size: 30px;
+
+}
+
+.infoCellMC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25%;
+}
+
+.infoCellSN i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    margin-bottom: 15%;
+}
+
+/* Style spécifique pour les liens des réseaux sociaux */
+.fa-facebook {
+    color: #3b5998;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .infoCell {
+        flex-basis: 100%;
+    }
+}
