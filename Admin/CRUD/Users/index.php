@@ -30,8 +30,8 @@ require '../../../Admin/includes/inc-top-tb.php';
                 <td><?php echo htmlspecialchars($user['email_utilisateur']); ?></td>
                 <td><?php echo htmlspecialchars($user['libelle_role']); ?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo htmlspecialchars($user['id_utilisateur']); ?>">Modifier</a> |
-                    <a href="delete.php?id=<?= htmlspecialchars($user['id_utilisateur']) ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur?');">Supprimer</a>
+                    <a class="update-button" class="update-button" href="edit.php?id=<?php echo htmlspecialchars($user['id_utilisateur']); ?>">Modifier</a> |
+                    <a class="delete-button" class="delete-button" href="delete.php?id=<?= htmlspecialchars($user['id_utilisateur']) ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur?');">Supprimer</a>
                 </td>
             </tr>
         <?php } ?>

@@ -4,7 +4,8 @@ require '../../../includes/inc-db-connect.php';
 $reductions = getAllReductions($dbh);
 require '../../../Admin/includes/inc-top-tb.php';
 ?>
-<div>
+
+<div class="header">
     <h1 class="h1">Liste des Réductions</h1>
     <a href="/Admin/dashboard.php" class="back-button">Retour</a>
     <a href="/Admin/CRUD/Discounts/new.php" class="create-button">Créer une nouvelle réduction</a>
@@ -29,8 +30,8 @@ require '../../../Admin/includes/inc-top-tb.php';
                 <td><?php echo $reduction['date_fin']; ?></td>
                 <td><?php echo $reduction['nom_produit']; ?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo $reduction['id_reduction']; ?>">Modifier</a> |
-                    <a href="delete.php?id=<?php echo $reduction['id_reduction']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur?');">Supprimer</a>
+                    <a class="update-button" href="edit.php?id=<?php echo $reduction['id_reduction']; ?>">Modifier</a> |
+                    <a class="delete-button" href="delete.php?id=<?php echo $reduction['id_reduction']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur?');">Supprimer</a>
                 </td>
             </tr>
         <?php } ?>

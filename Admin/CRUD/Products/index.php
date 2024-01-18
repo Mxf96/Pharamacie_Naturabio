@@ -7,7 +7,7 @@ $produits = getAllProducts($dbh);
 require '../../../Admin/includes/inc-top-tb.php';
 ?>
 
-<div>
+<div class="header">
     <h1 class="h1">Liste des Produits</h1>
     <a href="/Admin/dashboard.php" class="back-button">Retour</a>
     <a href="/Admin/CRUD/Products/new.php" class="create-button">Créer un nouveau produit</a>
@@ -36,8 +36,8 @@ require '../../../Admin/includes/inc-top-tb.php';
                 <td><?= htmlspecialchars($produit['prix_produit']); ?></td>
                 <td><?= htmlspecialchars($produit['quantite_produit']); ?></td>
                 <td>
-                    <a href="edit.php?id=<?= htmlspecialchars($produit['id_produit']); ?>">Modifier</a> |
-                    <a href="delete.php?id=<?= htmlspecialchars($produit['id_produit']); ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur?');">Supprimer</a>
+                    <a class="update-button" href="edit.php?id=<?= htmlspecialchars($produit['id_produit']); ?>">Modifier</a> |
+                    <a class="delete-button" href="delete.php?id=<?= htmlspecialchars($produit['id_produit']); ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur?');">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>

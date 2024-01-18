@@ -4,7 +4,8 @@ require '../../../includes/inc-db-connect.php';
 $marques = getAllBrands($dbh);
 require '../../../Admin/includes/inc-top-tb.php';
 ?>
-<div>
+
+<div class="header">
     <h1 class="h1">Liste des Marques</h1>
     <a href="/Admin/dashboard.php" class="back-button">Retour</a>
     <a href="/Admin/CRUD/Brands/new.php" class="create-button">Créer une nouvelle marque</a>
@@ -23,8 +24,8 @@ require '../../../Admin/includes/inc-top-tb.php';
                 <td><?php echo $marque['id_marque']; ?></td>
                 <td><?php echo $marque['nom_marque']; ?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo $marque['id_marque']; ?>">Modifier</a> |
-                    <a href="delete.php?id=<?php echo $marque['id_marque']; ?>">Supprimer</a>
+                    <a class="update-button" href="edit.php?id=<?php echo $marque['id_marque']; ?>">Modifier</a> |
+                    <a class="delete-button" href="delete.php?id=<?php echo $marque['id_marque']; ?>">Supprimer</a>
                 </td>
             </tr>
         <?php } ?>

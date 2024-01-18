@@ -25,7 +25,7 @@ require '../../includes/inc-top-fm.php';
 ?>
 <form method="post">
     <div class="card">
-        <a href="/admin/cruds/utilisateurs/index.php" class="btn btn-info btn-block">Retour</a>
+        <a href="/Admin/cruds/utilisateurs/index.php" class="btn btn-info btn-block">Retour</a>
         <h1>Modifier l'utilisateur</h1>
         <form method="post">
             <label> Nom: </label>

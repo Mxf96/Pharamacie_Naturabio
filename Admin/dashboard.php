@@ -1,5 +1,5 @@
 <?php
-require '../Admin/includes/inc-top-db.php'
+require '../Admin/includes/inc-top-db.php';
 ?>
 <div class="dashboard-container">
     <h1>Dashboard Admin</h1>
@@ -15,4 +15,3 @@ require '../Admin/includes/inc-top-db.php'
         <a href="/Admin/CRUD/Pictures/index.php" class="dashboard-button">IMAGES</a>
         <a href="/Admin/CRUD/Notices/index.php" class="dashboard-button">AVIS</a>
     </div>
-</div>
