@@ -71,7 +71,7 @@ require '../../includes/inc-top-fm.php';
 
 <form method="post">
     <div class="card">
-        <a href="/Admin/CRUD/Category/index.php" class="btn btn-info btn-block">Retour</a>
+        <a href="/Admin/CRUD/Category/index.php" class="back-button">Retour</a>
         <h1>Ajouter une nouvelle catégorie</h1>
         <form action="new.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
@@ -84,10 +84,10 @@ require '../../includes/inc-top-fm.php';
             </div>
             <div class="form-group">
                 <label>Image de la catégorie: </label>
-                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input class="select" type="file" name="fileToUpload" id="fileToUpload">
             </div>
             <div class="form-group">
-                <button type="submit" class="button" name="submit">Ajouter</button>
+                <button type="submit" class="btn" name="submit">Ajouter</button>
             </div>
     </div>
 </form>

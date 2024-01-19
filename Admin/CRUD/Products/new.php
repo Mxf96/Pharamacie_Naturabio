@@ -81,7 +81,7 @@ require '../../includes/inc-top-fm.php';
 
 <form method="post">
     <div class="card">
-        <a href="/Admin/CRUD/produits/index.php" class="btn btn-info btn-block">Retour</a>
+        <a href="/Admin/CRUD/products/index.php" class="back-button">Retour</a>
         <form action="new.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Nom du produit: </label>
@@ -101,7 +101,7 @@ require '../../includes/inc-top-fm.php';
             </div>
             <div class="form-group">
                 <label>Catégorie du produit: </label>
-                <select name="id_categorie">
+                <select class="select" name="id_categorie">
                     <?php foreach ($categories as $categorie) : ?>
                         <option value="<?= $categorie['id_categorie'] ?>"><?= $categorie['nom_categorie'] ?></option>
                     <?php endforeach ?>
@@ -109,7 +109,7 @@ require '../../includes/inc-top-fm.php';
             </div>
             <div class="form-group">
                 <label>Marque du produit: </label>
-                <select name="id_marque">
+                <select class="select" name="id_marque">
                     <?php foreach ($brands as $brand) : ?>
                         <option value="<?= $brand['id_marque'] ?>"><?= $brand['nom_marque'] ?></option>
                     <?php endforeach ?>
@@ -117,7 +117,7 @@ require '../../includes/inc-top-fm.php';
             </div>
             <div class="form-group">
                 <label>Image du produit: </label>
-                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input class="select" type="file" name="fileToUpload" id="fileToUpload">
             </div>
             <div class="form-group">
                 <button type="submit" name="submit" class="btn">Créer</button>

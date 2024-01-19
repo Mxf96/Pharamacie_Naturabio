@@ -1,8 +1,6 @@
 <?php
 require '../../../includes/inc-db-connect.php';
 require '../../managers/role-manager.php';
-require '../../../Admin/includes/inc-top-tb.php';
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_role = $_POST['id_role'];
@@ -26,7 +24,7 @@ if ($id_role !== null) {
 
         <form method="post">
             <div class="card">
-                <a href="/Admin/CRUD/roles/index.php" class="btn btn-info btn-block">Retour</a>
+                <a href="/Admin/CRUD/roles/index.php" class="back-button">Retour</a>
                 <h1>Modifier le rôle</h1>
                 <form method="post">
                     <input type="hidden" name="id_role" value="<?php echo $role['id_role']; ?>">
@@ -35,13 +33,12 @@ if ($id_role !== null) {
                         <input type="text" name="libelle_role" value="<?php echo $role['libelle_role']; ?>">
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="button" name="submit">Modifier</button>
+                        <button type="submit" class="btn" name="submit">Modifier</button>
                     </div>
             </div>
         </form>
 
 <?php
-        require '../../includes/inc-bottom.php';
     } else {
         echo "Rôle non trouvé.";
     }

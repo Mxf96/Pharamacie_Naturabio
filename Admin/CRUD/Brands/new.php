@@ -64,7 +64,7 @@ require '../../includes/inc-top-fm.php';
 
 <form method="post">
     <div class="card">
-        <a href="/Admin/CRUD/Products/index.php" class="btn btn-info btn-block">Retour</a>
+        <a href="/Admin/CRUD/Products/index.php" class="back-button">Retour</a>
         <form action="new.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Nom de la marque: </label>
@@ -72,14 +72,10 @@ require '../../includes/inc-top-fm.php';
             </div>
             <div class="form-group">
                 <label>Logo de la marque: </label>
-                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input class="select" type="file" name="fileToUpload" id="fileToUpload">
             </div>
             <div class="form-group">
                 <button type="submit" name="submit" class="btn">Créer</button>
             </div>
     </div>
 </form>
-
-<?php
-require '../../includes/inc-bottom.php';
-?>

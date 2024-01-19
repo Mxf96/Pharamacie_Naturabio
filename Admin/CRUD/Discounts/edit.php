@@ -36,7 +36,7 @@ if ($id_reduction !== null) {
 
         <div class="container">
             <div class="login-box">
-                <a href="/Admin/CRUD/Discounts/index.php" class="btn btn-info btn-block">Retour</a>
+                <a href="/Admin/CRUD/Discounts/index.php" class="back-button">Retour</a>
                 <h1>Modifier la réduction</h1>
                 <form method="post">
                     <input type="hidden" name="id_reduction" value="<?php echo $reduction['id_reduction']; ?>">

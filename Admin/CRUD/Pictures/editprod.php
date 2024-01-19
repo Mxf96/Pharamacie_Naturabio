@@ -57,17 +57,17 @@ require '../../includes/inc-top-fm.php';
 ?>
 <form method="post">
     <div class="card">
-        <a href="/Admin/CRUD/Pictures/index.php" class="btn btn-info btn-block">Retour</a>
+        <a href="/Admin/CRUD/Pictures/index.php" class="back-button">Retour</a>
         <h1 class="h1">Modifier l'image du produit</h1>
         <form method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="url_image">URL de l'image :</label>
             </div>
             <div class="form-group">
-                <input type="file" id="url_image" name="url_image">
+                <input class="select" type="file" id="url_image" name="url_image">
             </div>
             <div class="form-group">
-                <button type="submit">Mettre à jour</button>
+                <button class="btn" type="submit">Mettre à jour</button>
             </div>
     </div>
 </form>

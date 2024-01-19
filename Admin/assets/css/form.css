@@ -50,15 +50,21 @@ body::before {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin: 20px;
-    width: 50%;
+    width: 100%;
     /* Largeur de la card */
-    max-width: 500px;
+    max-width: 800px;
     /* Largeur maximale pour les grands écrans */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
+
+h1,
+label {
+    color: #404040;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+} 
 
 .form-group {
     margin-bottom: 15px;
@@ -110,6 +116,58 @@ body::before {
 
 .back-button:hover {
     background-color: rgba(0, 0, 0, 0.462);
+    color: rgb(245, 245, 245);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 5%;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+a {
+    float: right;
+    color: black;
+}
+
+a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+
+input[type="text"],
+input[type="password"],
+textarea {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 8px;
+    width: 100%;
+}
+
+.select {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 8px;
+    width: 100%;
+    background: #ffffff;
+    appearance: none;
 }
 
 /* Adaptations pour les écrans plus petits */

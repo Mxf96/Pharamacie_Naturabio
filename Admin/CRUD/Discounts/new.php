@@ -28,7 +28,7 @@ require '../../includes/inc-top-fm.php';
 
 <form method="post">
     <div class="card">
-        <a href="/Admin/CRUD/Discounts/index.php" class="btn btn-info btn-block">Retour</a>
+        <a href="/Admin/CRUD/Discounts/index.php" class="back-button">Retour</a>
         <h1>Ajouter une nouvelle réduction</h1>
         <div class="form-group">
             <label>Pourcentage : </label>

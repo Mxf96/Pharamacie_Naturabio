@@ -6,9 +6,9 @@ require '../../../Admin/includes/inc-top-tb.php';
 ?>
 
 <div class="header">
-    <h1 class="h1">Liste des Marques</h1>
+    <h1 class="h1">Liste des Gammes</h1>
     <a href="/Admin/dashboard.php" class="back-button">Retour</a>
-    <a href="/Admin/CRUD/Brands/new.php" class="create-button">Créer une nouvelle marque</a>
+    <a href="/Admin/CRUD/Brands/new.php" class="create-button">Créer une nouvelle gammes</a>
 </div>
 <table>
     <thead>

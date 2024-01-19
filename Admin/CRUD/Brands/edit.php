@@ -25,13 +25,13 @@ if ($id_marque !== null) {
 ?>
         <div class="container">
             <div class="login-box">
-                <a href="/Admin/CRUD/Products/index.php" class="btn btn-info btn-block">Retour</a>
+                <a href="/Admin/CRUD/Products/index.php" class="back-button">Retour</a>
                 <h1>Modifier la marque</h1>
                 <form method="post">
                     <input type="hidden" name="id_marque" value="<?php echo $marque['id_marque']; ?>">
                     <div class="form-group">
                         <label>Nom de la marque: </label>
-                        <input type="text" name="nom_marque" value="<?php echo $marque['nom_marque']; ?>">
+                        <input class="select" type="text" name="nom_marque" value="<?php echo $marque['nom_marque']; ?>">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="button" name="submit">Modifier</button>
@@ -40,7 +40,6 @@ if ($id_marque !== null) {
             </div>
         </div>
 <?php
-        require '../../includes/inc-bottom.php';
     } else {
         echo "Marque non trouvée.";
     }

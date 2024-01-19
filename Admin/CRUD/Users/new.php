@@ -30,7 +30,7 @@ require '../../includes/inc-top-fm.php';
 ?>
 <form method="post">
     <div class="card">
-        <a href="/Admin/CRUD/Roles/index.php" class="back-button ">Retour</a>
+        <a href="/Admin/CRUD/Users/index.php" class="back-button ">Retour</a>
         <h1>Ajouter un nouveau rôle</h1>
         <div class="form-group">
             <label>Nom : </label>

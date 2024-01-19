@@ -1,7 +1,6 @@
 <?php
 require '../../../includes/inc-db-connect.php';
 require '../../managers/role-manager.php';
-require '../../../Admin/includes/inc-top-tb.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,14 +17,14 @@ require '../../includes/inc-top-fm.php';
 
 <form method="post">
     <div class="card">
-        <a href="/Admin/CRUD/roles/index.php" class="btn btn-info btn-block">Retour</a>
+        <a href="/Admin/CRUD/roles/index.php" class="back-button">Retour</a>
         <h1>Ajouter un nouveau rôle</h1>
         <div class="form-group">
             <label>Libellé du rôle : </label>
             <input type="text" name="libelle_role">
         </div>
         <div class="form-group">
-            <button type="submit" class="button" name="submit">Ajouter</button>
+            <button type="submit" class="btn" name="submit">Ajouter</button>
         </div>
     </div>
 </form>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 require '../includes/inc-db-connect.php';
+require '../Admin/managers/security-manager.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

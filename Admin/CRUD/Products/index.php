@@ -1,9 +1,7 @@
 <?php
 require '../../managers/produit-manager.php';
 require '../../../includes/inc-db-connect.php';
-
 $produits = getAllProducts($dbh);
-
 require '../../../Admin/includes/inc-top-tb.php';
 ?>
 
