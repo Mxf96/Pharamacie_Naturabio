@@ -27,7 +27,7 @@ require '../../../Admin/includes/inc-top-tb.php';
                 <td><?php echo $imageProduit['nom_produit']; ?></td>
                 <td><img class="slide-in-down" src="/Admin/assets/<?php echo $imageProduit['url_image']; ?>" alt="Image de <?php echo $imageProduit['nom_produit']; ?>" style="width: 100px;"></td>
                 <td>
-                    <a href="editprod.php?id=<?= htmlspecialchars($imageProduit['id_image']); ?>">Modifier</a>
+                    <a class="update-button" href="editprod.php?id=<?= htmlspecialchars($imageProduit['id_image']); ?>">Modifier</a>
                     <a class="delete-button" href="delete.php?id=<?php echo $imageProduit['id_image']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur?');">Supprimer</a>
                 </td>
             </tr>
