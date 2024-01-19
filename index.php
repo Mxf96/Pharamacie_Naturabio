@@ -7,7 +7,7 @@ $prenomUtilisateur = isset($_SESSION['prenom_utilisateur']) ? $_SESSION['prenom_
 ?>
 <section class="main-content">
     <h2>Bienvenue<?php if ($prenomUtilisateur) {
-                        echo " " . htmlspecialchars($prenomUtilisateur);
+                        echo " " . sanitize_input($prenomUtilisateur);
                     } ?> à la Pharmacie Naturabio</h2>
     <p>Des produits naturels pour votre bien-être et santé.</p>
 </section>

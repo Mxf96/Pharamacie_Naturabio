@@ -7,11 +7,11 @@ $roles = getAllRoles($dbh);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $nom = strip_tags(trim(htmlspecialchars($_POST['nom_utilisateur'])));
-    $prenom = strip_tags(trim(htmlspecialchars($_POST['prenom_utilisateur'])));
-    $email = strip_tags(trim(htmlspecialchars($_POST['email_utilisateur'])));
-    $password = strip_tags(trim($_POST['mdp_utilisateur']));
-    $passwordConfirm = strip_tags(trim($_POST['confirm_password']));
+    $nom = sanitize_input($_POST['nom_utilisateur']);
+    $prenom = sanitize_input($_POST['prenom_utilisateur']);
+    $email = sanitize_input($_POST['email_utilisateur']);
+    $password = sanitize_input($_POST['mdp_utilisateur']);
+    $passwordConfirm = sanitize_input($_POST['confirm_password']);
     $role = intval($_POST['id_role']);
 
     if ($password !== $passwordConfirm) {

@@ -5,12 +5,13 @@ require '../../managers/marque-manager.php';;
 require '../../managers/produit-manager.php';
 require '../../managers/image-manager.php';
 
+
 $categories = getAllCategories($dbh);
 $brands = getAllBrands($dbh);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom_produit = strip_tags(trim(htmlspecialchars($_POST['nom_produit'])));
-    $description_produit = strip_tags(trim(htmlspecialchars($_POST['description_produit'])));
+    $nom_produit = sanitize_input($_POST['nom_produit']);
+    $description_produit = sanitize_input($_POST['description_produit']);
     $prix_produit = floatval($_POST['prix_produit']);
     $quantite_produit = intval($_POST['quantite_produit']);
     $categorie = intval($_POST['id_categorie']);
@@ -60,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // si tout va bien, essayez de télécharger le fichier
     } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+            echo "The file " . sanitize_input(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
         } else {
             echo "Sorry, there was an error uploading your file.";
         }

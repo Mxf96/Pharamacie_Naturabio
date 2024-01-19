@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['redirect_url'] = $_SERVER['REQUEST_URI'];
 require 'inc-db-connect.php'
 ?>
 <!DOCTYPE html>
@@ -25,9 +26,10 @@ require 'inc-db-connect.php'
         <nav class="navbar">
             <!-- Liens de navigation ici -->
             <a href="/">Accueil</a>
-            <a href="#">Produits</a>
-            <a href="#">Catégories</a>
-            <a href="#">Gammes</a>
+            <a href="/products/index.php">Produits</a>
+            <a href="/category/index.php">Catégories</a>
+            <a href="/ranges/index.php">Gammes</a>
+            <a href="/wishList/maliste.php"><i class="fas fa-shopping-cart"></i></a>
             <a href="/about.php">Contact</a>
             <?php
             if (isset($_SESSION['user_id'])) {

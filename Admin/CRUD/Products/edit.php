@@ -29,7 +29,7 @@ require '../../includes/inc-top-fm.php';
 <form method="post">
     <div class="card">
         <a href="/Admin/CRUD/produits/index.php" class="btn btn-info btn-block">Retour</a>
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . "?id=" . $id_produit); ?>" method="post">
+        <form action="<?php echo sanitize_input($_SERVER['PHP_SELF'] . "?id=" . $id_produit); ?>" method="post">
             <div class="form-group">
                 <label>Nom du produit: </label>
                 <input type="text" name="nom_produit" value="<?= $product['nom_produit'] ?>">

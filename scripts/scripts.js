@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Obtenir le modal et le bouton qui ouvre le modal
-    let modal = document.getElementById("login-modal");
+    let loginModal = document.getElementById("login-modal");
+    let loginTriggers = document.querySelectorAll(".login-trigger");
     let btn = document.querySelector(".navbar a[href='#Se Connecter']");
 
+    loginTriggers.forEach(btn => {
+        btn.onclick = function () {
+            loginModal.style.display = "block";
+        };
+    });
     // Obtenir l'élément <span> qui ferme le modal
     let span = document.getElementsByClassName("close")[0];
 

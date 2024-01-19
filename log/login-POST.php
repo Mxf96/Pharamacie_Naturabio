@@ -26,22 +26,31 @@ if (!empty($email) && !empty($password)) {
 
             // Redirection basée sur le rôle de l'utilisateur
             if ($user['id_role'] == 1) {
+                // Administrateur
                 header("Location: /Admin/dashboard.php");
             } elseif ($user['id_role'] == 2) {
-                header("Location: /index.php");
+                // Client
+                $redirectUrl = $_SESSION['redirect_url'] ?? '/index.php';
+                unset($_SESSION['redirect_url']); // Effacer l'URL stockée après utilisation
+                header("Location: " . $redirectUrl);
             } else {
+                // Rôle invalide ou non reconnu
                 header("Location: /index.php?error=invalidrole");
-                exit();
             }
+            exit();
         } else {
             // Mot de passe incorrect
             header('Location: /index.php?error=invalidpassword');
+            exit();
         }
     } else {
         // Utilisateur non trouvé
         header('Location: /index.php?error=nouser');
+        exit();
     }
 } else {
     // Champs manquants
     header('Location: /index.php?error=emptyfields');
+    exit();
 }
+?>

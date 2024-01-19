@@ -3,9 +3,10 @@ require '../../../includes/inc-db-connect.php';
 require '../../managers/role-manager.php';
 require '../../../Admin/includes/inc-top-tb.php';
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_role = $_POST['id_role'];
-    $libelle_role = strip_tags(trim(htmlspecialchars($_POST['libelle_role'])));
+    $libelle_role = sanitize_input($_POST['libelle_role']);
 
     updateRole($dbh, $id_role, $libelle_role);
 

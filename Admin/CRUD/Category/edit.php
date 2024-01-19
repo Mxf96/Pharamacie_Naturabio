@@ -2,10 +2,11 @@
 require '../../managers/categorie-manager.php';
 require '../../../includes/inc-db-connect.php';
 
+
 if ($_POST) {
     $id_categorie = $_POST['id_categorie'];
-    $nom_categorie = strip_tags(trim($_POST['nom_categorie']));
-    $description_categorie = strip_tags(trim($_POST['description_categorie']));
+    $nom_categorie = sanitize_input($_POST['nom_categorie']);
+    $description_categorie = sanitize_input($_POST['description_categorie']);
 
     if (!empty($nom_categorie)) {
         updateCategory($dbh, $id_categorie, $nom_categorie, $description_categorie);

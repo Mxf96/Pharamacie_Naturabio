@@ -3,9 +3,10 @@ require '../../managers/categorie-manager.php';
 require '../../managers/image-manager.php';
 require '../../../includes/inc-db-connect.php';
 
+
 if ($_POST) {
-    $nom_categorie = strip_tags(trim($_POST['nom_categorie']));
-    $description_categorie = strip_tags(trim($_POST['description_categorie']));
+    $nom_categorie = sanitize_input($_POST['nom_categorie']);
+    $description_categorie = sanitize_input($_POST['description_categorie']);
 
     if (!empty($nom_categorie)) {
         $target_dir = "uploads/";
@@ -50,7 +51,7 @@ if ($_POST) {
             echo "Sorry, your file was not uploaded.";
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $url_image)) {
-                echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+                echo "The file " . sanitize_input(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }

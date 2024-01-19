@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // If everything is OK, try to upload file
     if ($uploadOk == 1) {
         if (move_uploaded_file($_FILES["url_image"]["tmp_name"], $target_file)) {
-            echo "The file " . htmlspecialchars(basename($_FILES["url_image"]["name"])) . " has been uploaded.";
+            echo "The file " . sanitize_input(basename($_FILES["url_image"]["name"])) . " has been uploaded.";
             updateProductImage($dbh, $id, $target_file); // Update the image with the full path
             header("Location: index.php");
         } else {

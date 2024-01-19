@@ -28,16 +28,16 @@ require '../../../Admin/includes/inc-top-tb.php';
     <tbody>
         <?php foreach ($produits as $produit) : ?>
             <tr>
-                <td><?= htmlspecialchars($produit['id_produit']); ?></td>
-                <td><?= htmlspecialchars($produit['nom_produit']); ?></td>
-                <td><?= htmlspecialchars($produit['nom_categorie']); ?></td>
-                <td><?= htmlspecialchars($produit['nom_marque']); ?></td>
-                <td><?= htmlspecialchars($produit['description_produit']); ?></td>
-                <td><?= htmlspecialchars($produit['prix_produit']); ?></td>
-                <td><?= htmlspecialchars($produit['quantite_produit']); ?></td>
+                <td><?= sanitize_input($produit['id_produit']); ?></td>
+                <td><?= sanitize_input($produit['nom_produit']); ?></td>
+                <td><?= sanitize_input($produit['nom_categorie']); ?></td>
+                <td><?= sanitize_input($produit['nom_marque']); ?></td>
+                <td><?= sanitize_input($produit['description_produit']); ?></td>
+                <td><?= sanitize_input($produit['prix_produit']); ?></td>
+                <td><?= sanitize_input($produit['quantite_produit']); ?></td>
                 <td>
-                    <a class="update-button" href="edit.php?id=<?= htmlspecialchars($produit['id_produit']); ?>">Modifier</a> |
-                    <a class="delete-button" href="delete.php?id=<?= htmlspecialchars($produit['id_produit']); ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur?');">Supprimer</a>
+                    <a class="update-button" href="edit.php?id=<?= sanitize_input($produit['id_produit']); ?>">Modifier</a> |
+                    <a class="delete-button" href="delete.php?id=<?= sanitize_input($produit['id_produit']); ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur?');">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>

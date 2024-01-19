@@ -3,8 +3,9 @@ require '../../../includes/inc-db-connect.php';
 require '../../managers/marque-manager.php';;
 require '../../managers/image-manager.php';
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom_marque = strip_tags(trim(htmlspecialchars($_POST['nom_marque'])));
+    $nom_marque = sanitize_input($_POST['nom_marque']);
 
     $target_dir = "uploads/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -41,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Sorry, your file was not uploaded.";
     } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+            echo "The file " . sanitize_input(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
         } else {
             echo "Sorry, there was an error uploading your file.";
         }

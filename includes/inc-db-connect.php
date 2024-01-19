@@ -1,7 +1,6 @@
 <?php
 require_once 'vendor/autoload.php';
 
-
 // Charger les variables d'environnement
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();

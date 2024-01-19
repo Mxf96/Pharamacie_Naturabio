@@ -2,9 +2,10 @@
 require '../../managers/marque-manager.php';
 require '../../../includes/inc-db-connect.php';
 
+
 if ($_POST) {
     $id_marque = $_POST['id_marque'];
-    $nom_marque = strip_tags(trim($_POST['nom_marque']));
+    $nom_marque = sanitize_input($_POST['nom_marque']);
 
     if (!empty($nom_marque)) {
         updateBrand($dbh, $id_marque, $nom_marque);

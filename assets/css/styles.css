@@ -215,3 +215,338 @@ body::before {
         margin-bottom: 30%;
     }
 }
+
+
+
+
+
+.back-button {
+    position: absolute;
+    top: 10%;
+    padding: 10px 20px;
+    margin-right: 20px;
+    background-color: rgba(0, 0, 0, 0.248);
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.back-button:hover {
+    background-color: rgba(0, 0, 0, 0.462);
+}
+
+div>a:hover {
+    color: #f0f7d5;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.card {
+    border: 3px solid #fff;
+    border-radius: 15px;
+    animation-name: slideInDown;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 23%; 
+    margin: 20px;
+    position: relative;
+    background-color: rgba(174, 213, 129, 1);
+    overflow: hidden; /* Ajouté pour masquer le contenu débordant */
+}
+
+.card img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de la carte */
+    max-height: 100%; /* Assure que l'image ne dépasse pas la hauteur de la carte */
+    object-fit: cover; /* Ajuste l'image pour couvrir l'espace disponible */
+}
+
+
+.card a{
+    text-decoration: none;
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2px 16px;
+    background-color: rgba(174, 213, 129, 1);
+    color: rgb(245, 245, 245);
+    height: 20%;
+    margin-top: auto;
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    margin: 0;
+    padding: 0;
+}
+
+.image-container a {
+    display: block;
+}
+
+.centered {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+/* ficheTechnique */
+
+.product-container {
+    display: flex;
+    border: 1px solid rgba(174, 213, 129, 1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 5rem 5rem 0 5rem;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 1%;
+}
+
+.product-image {
+    width: 30%;
+    position: relative;
+    border: 5px solid rgb(245, 245, 245);
+    overflow: hidden;
+    background-color: rgba(174, 213, 129, 1);
+}
+
+.product-image::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animated-image {
+    animation: 1s ease-out 0s 1 slide-in;
+}
+
+.product-details {
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(174, 213, 129, 1);
+    color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 5px solid rgb(245, 245, 245);
+}
+
+.product-details h2 {
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.product-details h3 {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1%;
+}
+
+.product-details h4 {
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    align-self: center;
+}
+
+.product-details p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.add-to-list {
+    margin-top: 20px;
+    color: rgb(245, 245, 245);
+    background-color: transparent;
+    border: 2px solid rgb(245, 245, 245);
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.add-to-list:hover {
+    background-color: #f0f7d5;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+.product-details a {
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 10px 20px;
+    border: 2px solid rgb(245, 245, 245);
+    transition: all 0.3s ease;
+    align-self: center;
+}
+
+.product-details a:hover {
+    background-color: #f0f7d5;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+@keyframes explode {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.product-details form {
+    margin: 0;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    align-self: center;
+}
+
+.button-loading {
+    background-color: yellow;
+}
+
+.button-success {
+    background-color: green;
+    animation: explode 1s forwards;
+}
+
+.button-error {
+    background-color: red;
+    animation: explode 1s forwards;
+}
+
+/* ma liste */
+
+.maliste {
+    margin-top: 2%;
+}
+
+.maliste a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.maliste a:hover {
+    color: #9fff51;
+}
+
+.listeCell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgb(245, 245, 245);
+    background-color: rgba(174, 213, 129, 1);
+    padding: 5px;
+    border-radius: 0 15px 0 15px;
+    width: 60%;
+    padding: 2rem;
+}
+
+.favorisItem {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    margin-bottom: 10px;
+}
+
+.favorisItem p {
+    color: rgb(245, 245, 245);
+    font-weight: bold;
+}
+
+.favorisItem button {
+    color: rgb(245, 245, 245);
+    background-color: transparent;
+    border: 1px solid rgb(245, 245, 245);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.icone-liste img.slide-in-down {
+    width: 50px;
+    height: 50px;
+}
+
+.favorisItem button:hover {
+    background-color: #f0f7d5;
+}

@@ -101,7 +101,7 @@ body::before {
     padding: 10px 20px;
     margin-top: 20px;
     margin-right: 20px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.248);
     color: rgb(245, 245, 245);
     text-decoration: none;
     font-weight: bold;
@@ -109,7 +109,7 @@ body::before {
 }
 
 .back-button:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.462);
 }
 
 /* Adaptations pour les écrans plus petits */
