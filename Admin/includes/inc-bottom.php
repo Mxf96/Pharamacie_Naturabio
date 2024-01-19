@@ -10,5 +10,6 @@
         </footer>
         <script src="/scripts/carousel.js"></script>
         <script src="/scripts/scripts.js"></script>
+        <script src="/scripts/logout.js"></script>
     </body>
 </html>

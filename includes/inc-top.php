@@ -24,7 +24,7 @@ require 'inc-db-connect.php'
         </div>
         <nav class="navbar">
             <!-- Liens de navigation ici -->
-            <a href="/index.php">Accueil</a>
+            <a href="/">Accueil</a>
             <a href="#">Produits</a>
             <a href="#">Catégories</a>
             <a href="#">Gammes</a>
