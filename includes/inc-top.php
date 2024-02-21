@@ -16,6 +16,9 @@ require 'inc-db-connect.php'
         <link rel="stylesheet" href="/assets/css/carousel.css">
         <link rel="stylesheet" href="/assets/css/about.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Assurez-vous que le chemin vers autocomplete.js est correct -->
+        <script src="/products/autocomplete.js"></script>
     </head>
     
     <body>

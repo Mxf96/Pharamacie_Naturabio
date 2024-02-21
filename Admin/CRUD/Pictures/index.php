@@ -1,7 +1,7 @@
 <?php
 require '../../managers/image-manager.php';
 require '../../../includes/inc-db-connect.php';
-$imagesProduits = getAllImagesProduits($dbh);
+$productPictures = getAllproductPictures($dbh);
 $imagesMarque = getAllImagesMarques($dbh);
 $imagesCategories = getAllImagesCategories($dbh);
 require '../../../Admin/includes/inc-top-tb.php';
@@ -21,7 +21,7 @@ require '../../../Admin/includes/inc-top-tb.php';
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($imagesProduits as $imageProduit) { ?>
+        <?php foreach ($productPictures as $imageProduit) { ?>
             <tr>
                 <td><?php echo $imageProduit['id_image']; ?></td>
                 <td><?php echo $imageProduit['nom_produit']; ?></td>

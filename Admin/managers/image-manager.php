@@ -1,7 +1,7 @@
 <?php
 require '../../../includes/inc-db-connect.php';
 
-function getAllImagesProduits($dbh)
+function getAllproductPictures($dbh)
 {
     $sql = "SELECT images.id_image, images.url_image, produits.nom_produit
             FROM images

@@ -74,8 +74,8 @@
 
 #login-form button {
     width: 50%;
-    background-color: #f8ffac;
-    color: #333;
+    background-color: #c5ff26;
+    color: #fff;
     padding: 15px 20px;
     margin-top: 10px;
     border: none;
@@ -83,10 +83,11 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: bolder;
+    text-shadow: none;
 }
 
 #login-form button:hover {
-    background-color: #effe4a;
+    background-color: #afff81;
 }
 
 /* Style pour les champs de formulaire */
