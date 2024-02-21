@@ -43,7 +43,7 @@ require '../includes/inc-top.php';
                             echo "</div>";
                         }
                     } else {
-                        echo "<p>Vous n'avez aucun produit dans votre liste.</p>";
+                        echo "<p class='p'>Vous n'avez aucun produit dans votre liste.</p>";
                     }
                 } else {
                     // Aucune liste de souhaits n'existe pour cet utilisateur

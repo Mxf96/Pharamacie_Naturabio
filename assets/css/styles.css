@@ -491,6 +491,10 @@ div>a:hover {
 
 /* ma liste */
 
+.p {
+    color: #fff;
+}
+
 .maliste {
     margin-top: 2%;
 }
