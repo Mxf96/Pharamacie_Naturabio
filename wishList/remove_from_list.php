@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if (isset($_SESSION['user_id']) && isset($_POST['id_produit'])) {
+if (isset($_SESSION['id_utilisateur']) && isset($_POST['id_produit'])) {
     require '../includes/inc-db-connect.php';
 
-    $id_utilisateur = $_SESSION['user_id'];
+    $id_utilisateur = $_SESSION['id_utilisateur'];
     $id_product = $_POST['id_produit'];
 
     $stmt = $dbh->prepare("DELETE inclure FROM inclure 

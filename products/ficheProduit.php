@@ -22,7 +22,7 @@ if ($id) {
             <h3><?php echo $product['nom_categorie'];?>/<?php echo $product['nom_marque']; ?></h3>
             <h3><?php echo $product['description_produit']; ?></h3>
             <h3><?php echo $product['quantite_produit']; ?></h3>
-            <?php if (isset($_SESSION['user_id'])) : ?>
+            <?php if (isset($_SESSION['id_utilisateur'])) : ?>
                 <form id="wishlist-form" action="add_to_list.php" method="post">
                     <input type="hidden" name="id_produit" value="<?php echo $product['id_produit']; ?>">
                     <button id="add-to-list" type="submit" class="add-to-list">Ajouter à la liste</button>

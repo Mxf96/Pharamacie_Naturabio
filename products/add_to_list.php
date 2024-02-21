@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-if (isset($_SESSION['user_id'])) {
+if (isset($_SESSION['id_utilisateur'])) {
     require '../includes/inc-db-connect.php';
 
     $id_product = isset($_POST['id_produit']) ? $_POST['id_produit'] : null;
 
     if ($id_product) {
-        $id_utilisateur = $_SESSION['user_id'];
+        $id_utilisateur = $_SESSION['id_utilisateur'];
 
         // Vérifier si l'utilisateur a déjà une liste de favoris
         $stmt = $dbh->prepare("SELECT id_liste FROM liste_souhaits WHERE id_utilisateur = :id_utilisateur");

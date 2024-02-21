@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if (isset($_SESSION['user_id'])) {
+if (isset($_SESSION['id_utilisateur'])) {
     require '../includes/inc-db-connect.php';
 
-    $id_utilisateur = $_SESSION['user_id'];
+    $id_utilisateur = $_SESSION['id_utilisateur'];
 
     $stmt = $dbh->prepare("SELECT produits.nom_produit FROM produits 
                            JOIN inclure ON produits.id_produit = inclure.id_produit 

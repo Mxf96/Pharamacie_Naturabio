@@ -21,7 +21,7 @@ if (!empty($email) && !empty($password)) {
         // Vérification du mot de passe
         if (password_verify($password, $user['mdp_utilisateur'])) {
             // Création de la session utilisateur
-            $_SESSION['user_id'] = $user['id_utilisateur'];
+            $_SESSION['id_utilisateur'] = $user['id_utilisateur'];
             $_SESSION['user_email'] = $user['email_utilisateur'];
 
             // Redirection basée sur le rôle de l'utilisateur

@@ -1,0 +1,24 @@
+Naviguer jusqu'à votre projet : Ouvrez un terminal ou une invite de commande et utilisez la commande cd pour naviguer jusqu'au répertoire de votre projet Git. Par exemple :
+
+bash
+Copy code
+cd C:\Users\maxim\Desktop\Repository GitHub\Pharamacie_Naturabio
+Retirer le fichier .env du suivi Git : Puisque le fichier .env est dans le dossier includes, la commande doit refléter ce chemin. Essayez ceci :
+
+bash
+Copy code
+git rm --cached includes/.env
+Commit et push : Si la commande précédente fonctionne et retire le fichier de l'index, vous devez ensuite commettre cette modification et la pousser sur votre dépôt distant :
+
+bash
+Copy code
+git commit -m "Remove .env from tracked files"
+git push origin main
+Remplacez main par le nom de votre branche si elle est différente.
+
+Mettre à jour .gitignore : Assurez-vous que votre fichier .gitignore à la racine de votre projet inclut le chemin correct vers le fichier .env dans le dossier includes. Votre .gitignore doit contenir une ligne comme celle-ci :
+
+bash
+Copy code
+includes/.env
+Vérifier sur GitHub : Après avoir poussé vos modifications, allez sur GitHub pour vous assurer que le fichier .env a été retiré de votre dépôt.

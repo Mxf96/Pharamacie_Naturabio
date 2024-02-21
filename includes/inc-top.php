@@ -35,7 +35,7 @@ require 'inc-db-connect.php'
             <a href="/wishList/maliste.php"><i class="fas fa-shopping-cart"></i></a>
             <a href="/about.php">Contact</a>
             <?php
-            if (isset($_SESSION['user_id'])) {
+            if (isset($_SESSION['id_utilisateur'])) {
                 // Lien de déconnexion si l'utilisateur est connecté
                 echo '<a href="/log/logout.php">Déconnexion</a>';
             } else {

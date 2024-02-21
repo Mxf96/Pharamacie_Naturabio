@@ -8,9 +8,9 @@ require '../includes/inc-top.php';
     <div class="content maliste icone-liste">
         <div class="listeCell">
             <?php
-            if (isset($_SESSION['user_id'])) {
+            if (isset($_SESSION['id_utilisateur'])) {
                 // L'utilisateur est connecté, affichez sa liste
-                $id_utilisateur = $_SESSION['user_id'];
+                $id_utilisateur = $_SESSION['id_utilisateur'];
 
                 // Obtenir l'id de la liste de souhaits de l'utilisateur
                 $stmt = $dbh->prepare("SELECT id_liste FROM liste_souhaits WHERE id_utilisateur = :id_utilisateur");
@@ -31,7 +31,7 @@ require '../includes/inc-top.php';
                     $stmt->execute();
                     $favoris = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                    echo '<h1>Ma Liste</h1>';
+                    echo '<h1 class="h1" style=margin-top:-10px;>Ma Liste</h1>';
 
                     if (count($favoris) > 0) {
                         foreach ($favoris as $item) {
