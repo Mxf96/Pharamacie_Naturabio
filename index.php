@@ -1,8 +1,8 @@
 <?php
 require 'includes/inc-top.php';
 require 'includes/inc-db-connect.php';
+require 'manager/security-manager.php';
 require 'manager/index-manager.php';
-require 'log/security-manager.php';
 require 'manager/user-manager.php';
 
 // Vérifier si l'utilisateur est connecté et obtenir son ID
@@ -19,7 +19,7 @@ if ($idUtilisateur) {
 $imagesProduits = getAllproductPictures($dbh);
 ?>
 <section class="main-content">
-    <h2>Bienvenue <?php echo $prenomUtilisateur ? htmlspecialchars($prenomUtilisateur) : ''; ?> à la Pharmacie Naturabio</h2>
+    <h2>Bienvenue <?php echo $prenomUtilisateur ? sanitize_input($prenomUtilisateur) : ''; ?> à la Pharmacie Naturabio</h2>
     <p>Des produits naturels pour votre bien-être et santé.</p>
 </section>
 <section class="secondary-content">

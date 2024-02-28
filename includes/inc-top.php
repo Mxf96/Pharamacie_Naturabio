@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION['redirect_url'] = $_SERVER['REQUEST_URI'];
-require 'inc-db-connect.php'
+require 'inc-db-connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

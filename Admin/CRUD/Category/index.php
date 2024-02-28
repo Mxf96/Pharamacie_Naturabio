@@ -1,10 +1,9 @@
 <?php
 require '../../managers/categorie-manager.php';
 require '../../../includes/inc-db-connect.php';
-$categories = getAllCategories($dbh);
 require '../../../Admin/includes/inc-top-tb.php';
+$categories = getAllCategories($dbh);
 ?>
-
 <div class="header">
     <h1 class="h1">Liste des Catégories</h1>
     <a href="/Admin/dashboard.php" class="back-button">Retour</a>

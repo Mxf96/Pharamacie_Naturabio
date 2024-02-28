@@ -1,7 +1,7 @@
 <?php
 session_start();
 require '../includes/inc-db-connect.php';
-require '../log/security-manager.php';
+require '../manager/security-manager.php';
 
 $email = sanitize_input($_POST['email']);
 $password = sanitize_input($_POST['password']);
@@ -22,7 +22,7 @@ if (!empty($email) && !empty($password)) {
         if (password_verify($password, $user['mdp_utilisateur'])) {
             // Création de la session utilisateur
             $_SESSION['id_utilisateur'] = $user['id_utilisateur'];
-            $_SESSION['user_email'] = $user['email_utilisateur'];
+            $_SESSION['email_utilisateur'] = $user['email_utilisateur'];
 
             // Redirection basée sur le rôle de l'utilisateur
             if ($user['id_role'] == 1) {

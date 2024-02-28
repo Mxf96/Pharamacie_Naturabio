@@ -1,14 +1,13 @@
 <?php
 session_start();
 require '../includes/inc-db-connect.php';
-require '../log/security-manager.php';
-
+require '../manager/security-manager.php';
 
 $nom = sanitize_input($_POST['nom']);
 $prenom = sanitize_input($_POST['prenom']);
 $email = sanitize_input($_POST['new-email']);
-$password = $_POST['new-password'];
-$confirmPassword = $_POST['confirm-password'];
+$password = sanitize_input($_POST['new-password']);
+$confirmPassword = sanitize_input($_POST['confirm-password']);
 
 if (!empty($nom) && !empty($prenom) && !empty($email) && !empty($password) && !empty($confirmPassword)) {
     if ($password === $confirmPassword) {
